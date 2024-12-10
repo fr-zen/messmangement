@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphic Login Page</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #2b5876, #b2b1b8);
+            overflow: hidden;
+        }
+
+        /* Glassmorphism effect */
+        .login-container {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            width: 350px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .login-container h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .login-container p {
+            font-size: 14px;
+            color: #d1d1d1;
+            margin-bottom: 20px;
+        }
+
+        /* Input fields */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            background: rgba(49, 16, 148, 0.3);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+
+        /* Buttons */
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background: #6e8efb;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-button:hover {
+            background: #5a7edc;
+        }
+
+        .third-party-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .third-party-button img {
+            width: 20px;
+        }
+
+        .third-party-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Register and forgot links */
+        .login-container a {
+            color: #6e8efb;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Welcome Back</h1>
+        <p>Please enter your details to sign in.</p>
+        <form id="loginForm" onsubmit="login(event)">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+            <button type="submit" class="login-button">Sign In</button>
+        </form>
+        <p>OR</p>
+        <div class="third-party-button" id="googleLogin">
+            <img src="Images/search.png" alt="Google"> Continue with Google
+        </div>
+
+        <p>Don't have an account? <a href="signup_page.html">Create Account</a></p>
+    </div>
+
+    <!-- <script>
+        // Simulate login actions for demo purposes
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Logged in successfully!');
+        });
+
+        document.getElementById('googleLogin').addEventListener('click', function () {
+            alert('Redirecting to Google Login...');
+        });
+    </script> -->
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBzzZdZA2Kpwxbzz8BWS9GzXQGSO3HS5qQ",
+            authDomain: "mess-management-project.firebaseapp.com",
+            projectId: "mess-management-project",
+            storageBucket: "mess-management-project.firebasestorage.app",
+            messagingSenderId: "771618504252",
+            appId: "1:771618504252:web:311fb5027291c51f504d39",
+            measurementId: "G-MNP65CP0MD"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="JS/auth.js"></script>
+</body>
+
+</html>

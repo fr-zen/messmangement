@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mess Management System</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Menu</a></li>
+
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html">
+        <button class="btn">Login</button>
+      </a>
+      <a href="signup_page.html">
+        <button class="btn btn-signup">Signup</button>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="carousel">
+      <img src="Images/food.jpg" alt="Dish">
+      <div class="carousel-text">Food is not just fuel, it's information. It talks to your DNA and tells it what to do.
+      </div>
+    </div>
+    <button class="cta">Let's find something tasty</button>
+  </section>
+
+  <!-- Meals Section -->
+  <div class="meals">
+    <!-- Breakfast Section -->
+    <div class="meal-section">
+      <button class="meal-header" onclick="toggleMenu('breakfast')">Breakfast Timing (8:00-10:00 A.M)</button>
+      <div class="meal-menu" id="breakfast">
+
+        <div class="meal-card">
+          <h3>Monday</h3>
+          <img src="Images/Monday.jpeg" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+
+        <div class="meal-card">
+          <h3>Tuesday</h3>
+          <img src="Images/Tuesday.jpeg" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+        <div class="meal-card">
+          <h3>Wednesday</h3>
+          <img src="Images/Wednesday.jpeg" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+        <div class="meal-card">
+          <h3>Thursday</h3>
+          <img src="Images/Thursday.jpeg" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+        <div class="meal-card">
+          <h3>Friday</h3>
+          <img src="Images/Friday.jpeg" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+        <div class="meal-card">
+          <h3>Saturday</h3>
+          <img src="Images/Saturday.jpeg" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+        <div class="meal-card">
+          <h3>Sunday</h3>
+          <img src="Images/Sunday.jpeg" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Brunch Section -->
+    <div class="meal-section">
+      <button class="meal-header" onclick="toggleMenu('brunch')">Lunch Timing (12:30-2:00 P.M)</button>
+      <div class="meal-menu" id="brunch">
+
+        <div class="meal-card">
+          <h3>Sunday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Monday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Tuesday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Wednesday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Thursday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Friday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Saturday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Lunch Section -->
+    <div class="meal-section">
+      <button class="meal-header" onclick="toggleMenu('lunch')">Snacks Timing (5:00-6:00 P.M)</button>
+      <div class="meal-menu" id="lunch">
+
+        <div class="meal-card">
+          <h3>Sunday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Monday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Tuesday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Wednesday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Thursday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Friday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Saturday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dinner Section -->
+    <div class="meal-section">
+      <button class="meal-header" onclick="toggleMenu('dinner')">Dinner Timing (8:00-9:00 P.M)</button>
+      <div class="meal-menu" id="dinner">
+        <div class="meal-card">
+          <h3>Sunday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Monday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Tuesday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Wednesday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Thursday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+        <div class="meal-card">
+          <h3>Friday</h3>
+          <img src="" alt="Smoothie Bowl">
+          <p>A bowl of blended fruits topped with granola and nuts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Central Mess System -->
+      <div class="footer-section">
+        <h3>CENTRAL MESS SYSTEM</h3>
+        <p>
+          "Food brings people together on many different levels. It's nourishment of the soul and body; it's truly
+          love."
+          - Giada De Laurentiis
+        </p>
+      </div>
+
+      <!-- Visit Pages -->
+      <div class="footer-section">
+        <h3>VISIT PAGES</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Menu">About</a></li>
+          <li><a href="#about">Menu</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow Us On -->
+      <div class="footer-section">
+        <h3>FOLLOW US ON</h3>
+        <ul>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+          <!-- <li><a href="https://facebook.com" target="_blank">Facebook</a></li> -->
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-section">
+        <h3>CONTACT</h3>
+
+        <!--<p>Team Members:</p>-->
+        <!--<p>Rashi Gupta</p>--->
+        <p>Divyanshi Gautam</p>
+        <!--<p>Smita Patel</p>-->
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Firebase -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBzzZdZA2Kpwxbzz8BWS9GzXQGSO3HS5qQ",
+      authDomain: "mess-management-project.firebaseapp.com",
+      projectId: "mess-management-project",
+      storageBucket: "mess-management-project.firebasestorage.app",
+      messagingSenderId: "771618504252",
+      appId: "1:771618504252:web:311fb5027291c51f504d39",
+      measurementId: "G-MNP65CP0MD"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script> -->
+
+
+  <script src="JS/script.js"></script>
+  <script src="JS/auth.js"></script>
+
+</body>
+</html>

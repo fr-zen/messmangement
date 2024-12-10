@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="CSS/student.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .profile-form, .feedback-form {
+      background-color: #f4f4f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-form h2, .feedback-form h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .profile-form .form-group, .feedback-form .form-group {
+      margin-bottom: 15px;
+    }
+
+    .profile-form label, .feedback-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .profile-form input, .profile-form textarea,
+    .feedback-form input, .feedback-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .profile-form button, .feedback-form button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .profile-form button:hover, .feedback-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="Images/logo.png" alt="Logo" id="logo">
+      <h1>Welcome to Central Mess</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+     <!-- <a href="#faq">FAQ</a>-->
+      <button id="logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="student-section">
+      <h1>Welcome <span class="highlight">Student</span>,</h1>
+      <p>Look what features are available for you.</p>
+
+      <div class="button-container">
+        <button onclick="toggleMenu()"><i class="fas fa-utensils"></i> View Menu</button>
+        <button onclick="toggleProfileForm()"><i class="fas fa-user"></i> View Profile</button>
+        <button onclick="toggleFeedbackForm()"><i class="fas fa-comment"></i> Feedback</button>
+        <button onclick="togglePaymentHistory()"><i class="fas fa-wallet"></i> Payment History</button>
+        <!--<button onclick="navigate('contact-support')"><i class="fas fa-headset"></i> Contact Support</button>-->
+      </div>
+
+      <!-- Hidden menu section -->
+      <section id="menu" class="hidden">
+        <h2>Today's Menu</h2>
+        
+        <img src="Images/messmenu.jpeg" alt="Logo" id="logo">
+        <!--<div class="menu-section">
+          <div class="menu-category">
+            <h3>Breakfast</h3>
+            <div class="menu-items">
+              <div class="item">
+                <img src="assets/tea.jpg" alt="Tea">
+                <p>Tea</p>
+              </div>
+              <div class="item">
+                <img src="assets/coffee.jpg" alt="Coffee">
+                <p>Coffee</p>
+              </div>
+              <div class="item">
+                <img src="assets/paratha.jpg" alt="Paratha">
+                <p>Paratha</p>
+              </div>
+            </div>
+          </div>
+        </div>-->
+      </section>
+
+      <!-- Hidden profile form section -->
+      <section id="profile-form" class="hidden profile-form">
+        <h2>Student Profile</h2>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="branch">Branch:</label>
+          <input type="text" id="branch" placeholder="Enter your branch" required>
+        </div>
+        <div class="form-group">
+          <label for="room-no">Room No:</label>
+          <input type="text" id="room-no" placeholder="Enter your room number" required>
+        </div>
+        <div class="form-group">
+          <label for="roll-no">Roll No:</label>
+          <input type="text" id="roll-no" placeholder="Enter your roll number" required>
+        </div>
+        <div class="form-group">
+          <label for="bank">Bank:</label>
+          <input type="text" id="bank" placeholder="Enter your bank details" required>
+        </div>
+        <div class="form-group">
+          <label for="phone-no">Phone No:</label>
+          <input type="tel" id="phone-no" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea id="address" rows="3" placeholder="Enter your address"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="father-name">Father's Name:</label>
+          <input type="text" id="father-name" placeholder="Enter your father's name" required>
+        </div>
+        <button type="button">Save Profile</button>
+      </section>
+
+      <!-- Hidden feedback form section -->
+      <section id="feedback-form" class="hidden feedback-form">
+        <h2>Feedback</h2>
+        <div class="form-group">
+          <label for="feedback">Your Feedback:</label>
+          <textarea id="feedback" rows="5" placeholder="Write your feedback here..."></textarea>
+        </div>
+        <button type="button">Submit Feedback</button>
+      </section>
+
+      <section id="payment-history-form" class="hidden payment-history-form">
+        <h2>Payment History</h2>
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="text" id="amount" placeholder="Enter amount" required>
+        </div>
+        <div class="form-group">
+          <label for="semester">Semester:</label>
+          <input type="text" id="semester" placeholder="Enter semester" required>
+        </div>
+        <div class="form-group">
+          <label for="bank">Bank:</label>
+          <input type="text" id="bank" placeholder="Enter bank name" required>
+        </div>
+        <div class="form-group">
+          <label for="ifsc-code">IFSC Code:</label>
+          <input type="text" id="ifsc-code" placeholder="Enter IFSC code" required>
+        </div>
+        <button type="button" onclick="savePaymentHistory()">Save Payment History</button>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Need help? Contact us at <a href="mailto:centralmess777@gmail.com">centralmess777@gmail.com</a></p>
+  </footer>
+
+  <script>
+    // Toggle menu visibility
+    function toggleMenu() {
+      const menuSection = document.getElementById("menu");
+      menuSection.classList.toggle("hidden");
+    }
+
+    // Toggle profile form visibility
+    function toggleProfileForm() {
+      const profileForm = document.getElementById("profile-form");
+      profileForm.classList.toggle("hidden");
+    }
+
+    // Toggle feedback form visibility
+    function toggleFeedbackForm() {
+      const feedbackForm = document.getElementById("feedback-form");
+      feedbackForm.classList.toggle("hidden");
+    }
+
+    function navigate(section) {
+      alert("Navigating to " + section + " page!");
+    }
+
+    function togglePaymentHistory() {
+      const paymentHistoryForm = document.getElementById("payment-history-form");
+      paymentHistoryForm.classList.toggle("hidden");
+    }
+
+    // Save payment history
+    function savePaymentHistory() {
+      alert("Payment history saved successfully!");
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,315 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the logo image */
+.logo img {
+  max-height: 50px; /* Adjust to fit the header height */
+  width: auto;      /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the container */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.auth-buttons .btn {
+  padding: 8px 15px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-buttons .btn-signup {
+  background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background-color: #fff;
+  padding: 50px 20px;
+}
+
+.hero .carousel img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero .carousel-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: gray;
+}
+
+.hero .cta {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #3b5dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Meals Section */
+.meals {
+  margin: 20px;
+}
+
+.meals h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.meal-cards {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.meal-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 200px;
+}
+
+.meal-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.meal-card h3 {
+  margin: 10px 0;
+}
+
+.meal-card p {
+  color: gray;
+  font-size: 14px;
+}
+.meals {
+  margin: 20px;
+}
+
+.meal-header {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.meal-header:hover {
+  background-color: #2980b9;
+}
+
+.meal-menu {
+  display: none; /* Hidden by default */
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.meal-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.meal-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.meal-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.meal-card p {
+  margin: 0;
+  color: #555;
+}
+
+
+/*footer*/
+/* Footer Styles */
+.footer {
+  background-color: #f2f2f2;
+  padding: 20px 40px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #1d6fa5;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.footer-section a:hover {
+  color: #1d6fa5;
+}
+
+
+
+
+.meal-menu {
+  display: flex; /* Align items in a row */
+  gap: 15px; /* Add space between the meal cards */
+  justify-content: center; /* Center the items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap if the screen is too small */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.meal-card {
+  flex: 1 1 calc(33.33% - 30px); /* Each card takes one-third of the row minus the gap */
+  max-width: 300px; /* Optional: Limit the maximum width for each card */
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.meal-card img {
+  width: 100%; /* Make the image scale to the card width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
+}
+
+.meal-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.meal-card p {
+  color: gray;
+  font-size: 14px;
+}
+
+
+
+.meal-card {
+  display: flex;
+  flex-direction: column;  /* Stack the elements vertically */
+  align-items: center;  /* Center the elements horizontally */
+  text-align: center;  /* Center-align the text */
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 300px;  /* Optional: Limit the maximum width */
+}
+
+.meal-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;  /* Space between heading and image */
+  color: #333;
+}
+
+.meal-card img {
+  width: 100%;  /* Make the image fill the width of the card */
+  max-width: 250px;  /* Optional: Set a max width for the image */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 5px;
+  margin-bottom: 10px;  /* Space between image and description */
+}
+
+.meal-card p {
+  font-size: 14px;
+  color: gray;
+  margin-top: 10px;  /* Optional: Add space between image and description */
+}
